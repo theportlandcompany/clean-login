@@ -144,7 +144,7 @@ function clean_login_register_show($atts) {
 	if ( !is_user_logged_in() ) {
 		clean_login_get_template_file( 'register-form.php', $param );
 	} else {
-		echo "<div class='cleanlogin-notification error'><p>". __( 'You are now logged in. It makes no sense to register a new user', 'clean-login' ) ."</p></div>";
+		echo "<div class='cleanlogin-notification error'><p>". __( 'You are already signed in.', 'clean-login' ) ."</p></div>";
 		clean_login_get_template_file( 'login-preview.php' );
 		/*$login_url = get_option( 'cl_login_url', '');
 		if ( $login_url != '' )
@@ -182,7 +182,7 @@ function clean_login_restore_show($atts) {
 		} else
 			clean_login_get_template_file( 'restore-form.php' );
 	} else {
-		echo "<div class='cleanlogin-notification error'><p>". __( 'You are now logged in. It makes no sense to restore your account', 'clean-login' ) ."</p></div>";
+		echo "<div class='cleanlogin-notification error'><p>". __( 'You are already signed in.', 'clean-login' ) ."</p></div>";
 		clean_login_get_template_file( 'login-preview.php' );
 		/*$login_url = get_option( 'cl_login_url', '');
 		if ( $login_url != '' )
