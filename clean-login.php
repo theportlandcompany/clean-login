@@ -118,11 +118,9 @@ function clean_login_register_show($atts) {
 
 	if ( isset( $_GET['created'] ) ) {
 		if ( $_GET['created'] == 'success' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'User created', 'clean-login' ) ."</p></div>";
+		echo "<div class='cleanlogin-notification success'><p>". __( 'You have successfully registered. You will receive an email with your username and password.', 'clean-login' ) ."</p></div>";
 		else if ( $_GET['created'] == 'success-link' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'User created', 'clean-login' ) ."<br>". __( 'Please confirm your account, you will receive an email', 'clean-login' ) ."</p></div>";
-		else if ( $_GET['created'] == 'created' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'New user created', 'clean-login' ) ."</p></div>";
+			echo "<div class='cleanlogin-notification success'><p>". __( 'You have successfully registered and may sign in.', 'clean-login' ) ."<br>". __( 'Please confirm your account, you will receive an email', 'clean-login' ) ."</p></div>";		else if ( $_GET['created'] == 'created' )
 		else if ( $_GET['created'] == 'passcomplex' )
 			echo "<div class='cleanlogin-notification error'><p>". __( 'Passwords must be eight characters including one upper/lowercase letter, one special/symbol character and alphanumeric characters. Passwords should not contain the user\'s username, email, or first/last name.', 'clean-login' ) ."</p></div>";
 		else if ( $_GET['created'] == 'wronguser' )
